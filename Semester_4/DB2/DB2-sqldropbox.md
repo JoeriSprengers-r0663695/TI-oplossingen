@@ -159,7 +159,12 @@ where ROW_NUMBER < (select ROW_NUMBER
 		    where bb.spelersnr = 8)
 order by 1, 2 ,3 , 4
 ```
+...
 
+select spelersnr, naam, voorletters, geb_datum
+from spelers where naam||voorletters  < (select naam || voorletters from spelers where spelersnr = 8) 
+order by 1,2,3,4
+...
 
 ## Vensters
 
